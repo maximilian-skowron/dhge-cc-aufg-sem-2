@@ -1,4 +1,4 @@
-# Einleitung
+# dhge-cc-aufg-sem-2
 
 ## Beschreibung
 
@@ -23,3 +23,16 @@
   3. die Simulations-Ergebnisse am Ende auf meinem lokalen Rechner vorfinden,
 
 **um** mir nicht einen Hochleistungs-Rechner selber ins Rechenzentrum stellen zu müssen bzw. ein nicht vorhandenes Betriebssystem nutzen zu können.
+
+### Bewertungskriterien + Erfüllungsgrad
+
+| Kriterium                          | Erfüllungsgrad           |
+| ---------------------------------- |:------------------------:|
+| Kanbanboard                        | nicht angefangen         |
+| Änderungen umsetzbar               | n.a.                     |
+| MVP + Rückmeldung                  | n.a.                     |
+| Checkliste, vorgehen Laboringeneur | n.a.                     |
+| Abstrakt/kurze Beschreibung        | n.a.                     |
+| Liste mit Restaufgaben             | n.a.                     |
+| Quelltexte                         | n.a.                     |
+| Vortrag erstellt                   | n.a.                     |
