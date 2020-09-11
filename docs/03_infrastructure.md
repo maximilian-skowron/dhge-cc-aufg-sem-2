@@ -1,3 +1,0 @@
-# Infrastruktur bereitstellen
-
-als erstes

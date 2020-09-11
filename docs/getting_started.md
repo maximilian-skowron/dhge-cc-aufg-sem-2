@@ -1,4 +1,4 @@
-# Einleitung
+# 1 Einleitung
 
 ## Beschreibung
 
@@ -10,7 +10,7 @@
 
 ### User-Story
 
-**Ich als** Laboringeneur 
+**Ich als** Laboringeneur
 **möchte** eine Anleitung und eine Beispiel-Skript (Beispiel-Ablauf-Beschreibung) dafür haben,
 **um** eine rechenintensive Anwendung im AWS zu starten.
 
@@ -18,8 +18,9 @@
 
 **Ich als** Laboringeneur
 **möchte** mein eigenes Simulationsprogramm auf einem Cloud-Rechner laufen lassen können, dazu
-  1. notwendige Daten hochladen können,
-  2. die Simulation starten und
-  3. die Simulations-Ergebnisse am Ende auf meinem lokalen Rechner vorfinden,
+
+1. notwendige Daten hochladen können,
+2. die Simulation starten und
+3. die Simulations-Ergebnisse am Ende auf meinem lokalen Rechner vorfinden,
 
 **um** mir nicht einen Hochleistungs-Rechner selber ins Rechenzentrum stellen zu müssen bzw. ein nicht vorhandenes Betriebssystem nutzen zu können.

@@ -1,3 +1,0 @@
-# Lösungsarchitekturen
-
-blah
