@@ -11,15 +11,15 @@ Um dieses Ziel zu erreichen müssen Skripte in irgendeiner Art verwendet werden.
 
 Innerhalb dieser Ausarbeitung wird Terraform als Infrastructur Provisioner genutzt.
 
-## Setup Repository
+## Setups
+
+### Setup Repository
 
 Als erstes muss das Repository lokal geclont werden.
 
 ```bash
 git clone https://github.com/maximilian-skowron/dhge-cc-aufg-sem-2.git && cd dhge-cc-aufg-sem-2
 ```
-
-## Setups
 
 ### AWS Setup
 
