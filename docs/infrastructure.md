@@ -6,4 +6,9 @@ nav_order: 4
 
 # 3 Infrastruktur bereitstellen
 
-als erstes
+Die Infrastruktur soll reproduzierbar und nachvollziehbar sein.
+Um dieses Ziel zu erreichen müssen Skripte in irgendeiner Art verwendet werden.
+
+Innerhalb dieser Ausarbeitung wird Terraform als Infrastructur Provisioner genutzt.
+
+## Setup Terraform
