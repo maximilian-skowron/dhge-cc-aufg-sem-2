@@ -40,7 +40,8 @@ Für die Installation bitte der Dokumentation auf [der Terraform Website](https:
 
 ---
 
-Innerhalb des Terraform Ordners des Reposiotries muss nun noch eine `var.tfvars` Datei angelegt werden, welche die Secrets des AWS Users halten werden.
+Innerhalb des Terraform Ordners des Reposiotries muss nun noch eine `var.tfvars` Datei angelegt werden, welche die Secrets des AWS Users halten werden. 
+Auch müssen dort die Namen der S3 Buckets definiert werden.
 Dort wird folgender Inhalt erstellt:
 
 ```
