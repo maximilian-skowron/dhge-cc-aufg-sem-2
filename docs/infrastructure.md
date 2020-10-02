@@ -46,9 +46,11 @@ Dort wird folgender Inhalt erstellt:
 ```
 ak = "Access Key des Terraform Nutzers"
 sk = "Secret Key des Terraform Nutzers"
+upload-bucket-name = "name-of-upload-bucket"
+result-bucket-name = "name-of-result-bucket"
 ```
 
-> Namensgebung ist wichtig!
+> Namensgebung ist wichtig! Die Namen von S3 Buckets müssen bei AWS global EINDEUTIG sein.
 
 ### Infrastruktur bereitstellen
 
@@ -68,7 +70,10 @@ Sollte eine andere Region gewollt sein muss entweder die Flag `-var 'region=..'`
 ```
 ak = "Access Key des Terraform Nutzers"
 sk = "Secret Key des Terraform Nutzers"
+...
 region = "us-east-1"
 ```
+
+> Generell können alle Variablen, die in der `variables.tf` Datei definiert wurden, mittels dem `-var` Flag oder der `tfvars` Datei überschrieben werden.
 
 ## Erklärung Terraform Skript

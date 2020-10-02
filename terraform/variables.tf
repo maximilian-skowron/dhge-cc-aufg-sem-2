@@ -10,3 +10,13 @@ variable "ak" {
 variable "sk" {
   type = string
 }
+
+variable "upload-bucket-name" {
+  description = "Name of the upload bucket."
+  type = string
+}
+
+variable "result-bucket-name" {
+  description = "Name of the upload bucket."
+  type = string
+}
