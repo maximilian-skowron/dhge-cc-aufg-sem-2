@@ -1,5 +1,5 @@
 resource "aws_elastic_beanstalk_application" "beanstalk" {
-  name        = "dhge-sim-beanstalk"
+  name        = "dhge-sim-beanstalk-app"
   description = "Holds the simulation application."
 }
 
