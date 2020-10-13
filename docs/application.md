@@ -12,12 +12,34 @@ In der Beispiel Anwendung wird davon ausgegangen, dass das Simulationsprogramm a
 ## Applikation
 
 Da sich bei der Bereistellung von EB für `nodeJs` entschieden wurde muss eine NodeJs App erstellt werden.
-Die App kann in diesem Repository unter ... gefunden werden.
+Die App kann in diesem Repository unter `sim-prog` gefunden werden.
+
+Es wird das [Jimp](https://www.npmjs.com/package/jimp) Package verwendet, um das hochgeladene Bild zu bearbeiten.
 
 ## Code auf Beanstalk bereitstellen
 
 Es gibt generell zwei Möglichkeiten Code auf Beanstalk bereitzustellen. 
 Einmal über die UI und über ein von AWS bereitgestelltes CLI Tool.
+Bevor der Code bereitgestellt wird müssen innerhalb der `app.js` mehrere Variablen angepasst werden, um den Zugang zu den erstellten S3 Buckets zu ermöglichen.
+
+```js
+var bucketNameUpload = 'dhge-sim-bucket-upload';
+var bucketNameResult = 'dhge-sim-bucket-result';
+
+var s3 = new AWS.S3({
+    accessKeyId: 'accessKey',  /* key */
+    secretAccessKey: 'secretAccessKey',
+    params: { Bucket: bucketNameUpload }, region: 'eu-central-1'
+});
+
+var s3Result = new AWS.S3({
+    accessKeyId: 'accessKey',  /* key */
+    secretAccessKey: 'secretAccessKey',
+    params: { Bucket: bucketNameResult }, region: 'eu-central-1'
+});
+```
+
+In einer produktiven Umgebung sollten die Bucketnamen und die Zugangsdaten mittels Umgebungsvariablen bereitgestellt werden.
 
 ### CLI
 

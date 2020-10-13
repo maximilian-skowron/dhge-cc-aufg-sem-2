@@ -6,37 +6,41 @@ var port = process.env.PORT || 3000,
     AWS = require('aws-sdk'),
     async = require('async');
 
-var bucketNameUpload = 'dhge-sim-bucket-upload';
-var bucketNameResult = 'dhge-sim-bucket-result';
+var bucketNameUpload = 'NAME BUCKET UPLOAD';
+var bucketNameResult = 'NAME BUCKET RESULT';
 var s3 = new AWS.S3({
-    accessKeyId: 'AKIAS3SH46ZATH74SMXF',  /* key */
-    secretAccessKey: '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',
-    params: { Bucket: bucketNameUpload }, region: 'eu-central-1'
+    accessKeyId: 'ACCESSKEY',
+    /* key */
+    secretAccessKey: 'SECRETKEY',
+    params: { Bucket: bucketNameUpload },
+    region: 'eu-central-1'
 });
 var s3Result = new AWS.S3({
-    accessKeyId: 'AKIAS3SH46ZATH74SMXF',  /* key */
-    secretAccessKey: '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',
-    params: { Bucket: bucketNameResult }, region: 'eu-central-1'
+    accessKeyId: 'ACCESSKEY',
+    /* key */
+    secretAccessKey: 'SECRETKEY',
+    params: { Bucket: bucketNameResult },
+    region: 'eu-central-1'
 });
 
-var log = function (entry) {
+var log = function(entry) {
     fs.appendFileSync('/tmp/sample-app.log', new Date().toISOString() + ' - ' + entry + '\n');
 };
 
-var done = function (err, data) {
+var done = function(err, data) {
     if (err) console.log(err);
     else console.log(data);
 };
 
-var server = http.createServer(function (req, res) {
+var server = http.createServer(function(req, res) {
     if (req.method === 'POST') {
         var body = '';
 
-        req.on('data', function (chunk) {
+        req.on('data', function(chunk) {
             body += chunk;
         });
 
-        req.on('end', function () {
+        req.on('end', function() {
             if (req.url === '/') {
                 log('Received message: ' + body);
             } else if (req.url = '/scheduled') {
@@ -50,9 +54,9 @@ var server = http.createServer(function (req, res) {
 
         if (req.url === '/start') {
 
-            s3.listObjects(function (err, data) {
+            s3.listObjects(function(err, data) {
                 if (data.Contents.length) {
-                    async.each(data.Contents, function (file, cb) {
+                    async.each(data.Contents, function(file, cb) {
                         var params = {
                             Bucket: bucketNameUpload,
                             // CopySource: bucketNameUpload + '/' + file.Key,
@@ -60,7 +64,7 @@ var server = http.createServer(function (req, res) {
                         };
 
 
-                        s3.getObject(params, function (err, data) {
+                        s3.getObject(params, function(err, data) {
 
                             var fileNew = manipulate(data.Body);
 
@@ -75,12 +79,11 @@ var server = http.createServer(function (req, res) {
                                     Body: f
                                 };
 
-                                s3Result.upload(params, function (err, copyData) {
+                                s3Result.upload(params, function(err, copyData) {
                                     if (err) {
                                         console.log(err);
                                         cb(err);
-                                    }
-                                    else {
+                                    } else {
                                         console.log('Uploaded: ', params.Key);
                                     }
                                 });
