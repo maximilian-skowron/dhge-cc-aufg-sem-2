@@ -16,7 +16,7 @@ resource "aws_elastic_beanstalk_environment" "beanstalk_env" {
   setting {
     namespace = "aws:autoscaling:launchconfiguration"
     name      = "InstanceType"
-    value     = "t2.micro"
+    value     = var.instance-type
   }
   setting {
     namespace = "aws:autoscaling:asg"
