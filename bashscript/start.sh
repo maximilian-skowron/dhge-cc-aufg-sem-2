@@ -15,5 +15,6 @@ for file in "$path"/*; do
   putS3 "$path" "${file##*/}" "/"
 done
 wget http://dhge-sim-beanstalk.eba-qwpuumny.eu-central-1.elasticbeanstalk.com/start
+rm start
 sleep 15
 aws s3 sync s3://dhge-sim-bucket-result "$dest"
