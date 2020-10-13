@@ -81,6 +81,19 @@ region = "us-east-1"
 
 ## Erklärung Terraform Skript
 
+### Terraform Variablen die vom Skript unterstützt werden
+
+| Variable Name      	| Beschreibung                                                                                       	| Default Wert 	| Beispielwert       	|
+|--------------------	|----------------------------------------------------------------------------------------------------	|--------------	|--------------------	|
+| region             	| AWS Region in der alle Ressourcen erstellt werden.                                                 	| eu-central-1 	| us-east-1          	|
+| ak                 	| Access Key des Terraform Nutzers.                                                                  	| /            	| dkfjwfn..          	|
+| sk                 	| Secret Key des Terraform Nutzers.                                                                  	| /            	| vcienl..           	|
+| upload-bucket-name 	| Name des S3 Buckets, wo hochgeladene Dokumente gespeichert werden. (global eindeutig)              	| /            	| dhge-upload-bucket 	|
+| result-bucket-name 	| Name des S3 Buckets, wo die Ergebnisse und Transformationen gespeichert werden. (global eindeutig) 	| /            	| dhge-result-bucket 	|
+| instance-type      	| Typ der EC2 VMs für Elastic Beanstalk.                                                             	| t2.micro     	| t2.large           	|
+
+### Terraform Skript 
+
 Der Provider definiert Ressourcen und Datentypen innerhalb der `.tf` Dateien und stellt eine Verbindung mit der AWS bereit.
 Aller Informationen über die möglichen Konfigurationen und wie man den Provider benutzt findet man in der [Dokumentation](https://registry.terraform.io/providers/hashicorp/aws/latest/docs).
 
