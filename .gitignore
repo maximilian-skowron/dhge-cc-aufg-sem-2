@@ -34,3 +34,7 @@ override.tf.json
 # Ignore CLI configuration files
 .terraformrc
 terraform.rc
+# Elastic Beanstalk Files
+.elasticbeanstalk/*
+!.elasticbeanstalk/*.cfg.yml
+!.elasticbeanstalk/*.global.yml
