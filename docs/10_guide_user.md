@@ -7,6 +7,14 @@ nav_order: 8
 
 # How To - Nutzer
 
+## Checkliste
+
+- AWS CLI installieren
+- mit Nutzeraccount bei der CLI anmelden (`aws configure`)
+- Bashskript Werte umtauschen
+
+## Vorgehen
+
 Als Nutzer müssen mit den Entwicklern folgende Dinge geklärt werden:
 
 - Die Namen der AWS Buckets
