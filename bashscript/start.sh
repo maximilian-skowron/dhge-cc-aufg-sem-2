@@ -16,5 +16,5 @@ for file in "$path"/*; do
 done
 wget http://dhge-sim-beanstalk.eba-qwpuumny.eu-central-1.elasticbeanstalk.com/start
 rm start
-sleep 15
+sleep 25
 aws s3 sync s3://dhge-sim-bucket-result "$dest"
