@@ -17,7 +17,7 @@ Grob kann man es in drei Teile unterteilen.
 
 Das Skript ist in der Lage nicht nur einzelne Dateien, sondern ganze Ordnerinhalte hochzuladen.
 Dafür wird eine Bashfunktion angelegt.
-Innerhalb der Funktion wird mit dem AWS CLI Tool (`aws`) entsprechend übergebene Datei in den vorher angelegten Bucket kopiert.
+Innerhalb der Funktion wird mit dem AWS CLI Tool (`aws`) die entsprechend übergebene Datei in den vorher angelegten Bucket kopiert.
 
 ```bash
 function putS3
@@ -37,8 +37,8 @@ for file in "$path"/*; do
 done
 ```
 
-Danach wird mit `wget` und der URL der Beanstalk App die Transformation / Simulation gestartet.
+Danach wird mit `wget` und der URL der Beanstalk-App die Transformation / Simulation gestartet.
 Dabei muss die URL auf `/start` enden.
 Da innerhalb der Beanstalk App ein Endpunkt definiert wurde.
 
-Zu letzt kann mit dem Befehl `aws s3 sync s3://bucketname ./ziel/pfad` der Ordnerinhalt des Ergebniss Buckets mit einem Ordner auf dem lokalen Dateisystem synchronisiert werden.
+Zu letzt kann mit dem Befehl `aws s3 sync s3://bucketname ./ziel/pfad` der Ordnerinhalt des Ergebnis Buckets mit einem Ordner auf dem lokalen Dateisystem synchronisiert werden.

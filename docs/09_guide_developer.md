@@ -9,7 +9,7 @@ nav_order: 8
 
 ## Lambda
 
-Um Änderungen an den Lambda Funktionen durchzuführen muss Python 3 installiert sein.
+Um Änderungen an den Lambda-Funktionen durchzuführen, muss Python 3 installiert sein.
 Danach muss im `lambdas` Ordner `pip3 install -r requirements.txt` ausgeführt werden.
 Dieser Befehl sorgt dafür, dass alle Abhängigkeiten installiert werden.
 
