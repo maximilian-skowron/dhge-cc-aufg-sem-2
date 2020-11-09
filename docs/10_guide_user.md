@@ -12,6 +12,7 @@ nav_order: 8
 - AWS CLI installieren
 - mit Nutzeraccount bei der CLI anmelden (`aws configure`)
 - Bashskript Werte umtauschen
+- Bashskript mit Quell- und Zielordner ausführen
 
 ## Vorgehen
 
