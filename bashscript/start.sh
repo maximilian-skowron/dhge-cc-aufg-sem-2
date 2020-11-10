@@ -1,5 +1,6 @@
 #!/bin/bash
 
+# function to upload one file to s3 bucket
 function putS3
 {
   path=$1
@@ -14,7 +15,15 @@ for file in "$path"/*; do
   #transfering all object in path to s3
   putS3 "$path" "${file##*/}" "/"
 done
+
+# starting simulation on beanstalk
+# and remove logs, errors bzw. console output file
 wget http://dhge-sim-beanstalk.eba-qwpuumny.eu-central-1.elasticbeanstalk.com/start
 rm start
+
+# the beanstalk app uploads the result images
+# but the response is 200 even if the upload isn't ready yet
 sleep 25
+
+# sync directory content with s3 bucket results 
 aws s3 sync s3://dhge-sim-bucket-result "$dest"
