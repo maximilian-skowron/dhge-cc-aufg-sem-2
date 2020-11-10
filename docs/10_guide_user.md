@@ -9,6 +9,7 @@ nav_order: 8
 
 ## Checkliste
 
+- Linux Rechner oder WSL auf Windows
 - AWS CLI installieren
 - mit Nutzeraccount bei der CLI anmelden (`aws configure`)
 - Bashskript Werte umtauschen
